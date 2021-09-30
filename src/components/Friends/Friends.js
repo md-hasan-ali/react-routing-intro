@@ -13,7 +13,10 @@ const Friends = () => {
             <h2>I Have Friends : {friends.length}</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridGap: '10px', margin: '0px 10px' }}>
                 {
-                    friends.map(friend => <Friend friend={friend}></Friend>)
+                    friends.map(friend => <Friend
+                        key={friend.id}
+                        friend={friend}
+                    ></Friend>)
                 }
             </div>
         </div>
